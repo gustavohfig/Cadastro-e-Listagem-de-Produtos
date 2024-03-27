@@ -31,7 +31,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    margin-top: 40px; 
+    margin-top: 40px; /* Ajuste para posicionar mais abaixo */
   }
   
   h1 {
@@ -64,7 +64,7 @@ body {
   
   select {
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /*Esta imagem SVG é uma seta para baixo, indicando visualmente que é um menu suspenso.*/
     background-repeat: no-repeat;
     background-position: right 10px center;
   }
@@ -108,6 +108,16 @@ body {
   button#addProductBtn:hover {
     background-color: #218838;
   }
+
+  button#removeProductBtn {
+    display: block;
+    margin: 20px auto;
+    background-color: #007bff;
+  }
+
+  button#removeProductBtn:hover {
+    background-color: #0056b3;
+  }
   
   .product-row {
     cursor: pointer;
@@ -130,9 +140,6 @@ body {
     transition: opacity 0.3s ease, visibility 0s linear 0.3s;
   }
   
-  .product-row:hover .product-description {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0s linear 0s;
+  .selected {
+    background-color: #0056b3;
   }
-  
